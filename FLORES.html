@@ -427,31 +427,12 @@
         }, 300);
       });
 
-      // Botón Sí - cambia el contenido de la carta y envía notificación
+      // Botón Sí - cambia el contenido de la carta
       yesBtn.addEventListener('click', () => {
         cardContent.innerHTML = `
           <h2 style="text-align: center; color: #333; margin-bottom: 20px;">¡Ahora sí!</h2>
           <p style="text-align: center; font-size: 18px; color: #333;">Esta viejita es tuya</p>
         `;
-        
-        // Enviar email automático
-        const emailBody = `
-          ¡FELICIDADES! 🎉
-          
-          Tu amoricto dijo que SÍ y aceptó ser tu novia.
-          
-          Fecha y hora: ${new Date().toLocaleString()}
-          Página visitada: ${window.location.href}
-          
-          ¡Disfruta de tu nueva relación! 💕
-        `;
-        
-        // Abrir el cliente de email predeterminado
-        const mailtoLink = `mailto:valeriaquezada6@hotmail.com?subject=¡Ella dijo que SÍ! 💕&body=${encodeURIComponent(emailBody)}`;
-        window.open(mailtoLink);
-        
-        // También mostrar notificación en pantalla
-        alert('¡Ella dijo que SÍ! 💕 Se está enviando un email con la notificación.');
       });
 
       // Botón No - se hace más grande
